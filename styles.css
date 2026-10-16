@@ -1,13 +1,13 @@
 /* QuoteNest | IT 110 Midterm Project - styles.css */
 
 :root {
-    --primary: #3b5b7a;
+    --primary: #334f6b;
     --dark: #2c4560;
     --light: #e8eef4;
-    --accent: #e9a23b;
+    --accent: #e9a641;
     --bg: #faf6ef;
-    --text: #2e2e2e;
-    --gray: #6b6b6b;
+    --text: #2b2a2a;
+    --gray: #626262;
     --border: #e6dfd3;
     --shadow: 0 4px 14px rgba(0, 0, 0, .1);
     --radius: 14px;
