@@ -1,7 +1,7 @@
 Group 67
 
 Members:
-Ryll Justyn Posadas
+Ryll Justyn S. Posadas
 Kate E. Matchica
 Venedict Bastian Lorenzo L. Mejia
 
