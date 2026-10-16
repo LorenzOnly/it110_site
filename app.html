@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteNest | Random Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">QuoteNest</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#generator">Generator</a>
+        </nav>
+    </header>
+
+    <main class="generator-page" id="generator">
+        <section class="quote-container">
+            <p class="eyebrow">A LITTLE INSPIRATION</p>
+            <h1>Random Quote Generator</h1>
+            <p class="intro">
+                Discover a new thought, one quote at a time.
+            </p>
+
+            <div class="quote-card">
+                <span class="quote-mark">“</span>
+                <p id="quote-text" aria-live="polite">
+                    Click the button below to discover a quote.
+                </p>
+                <p id="quote-author">— Your next inspiration awaits</p>
+            </div>
+
+            <p id="status-message" role="status"></p>
+
+            <div class="quote-actions">
+                <button id="new-quote-btn" class="button">
+                    New Quote
+                </button>
+                <button id="copy-quote-btn" class="button secondary">
+                    Copy Quote
+                </button>
+            </div>
+
+            <a href="index.html" class="back-link">
+                ← Back to Portfolio
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>QuoteNest | IT 110 Midterm Project</p>
+        <p>Quotes provided by
+            <a href="https://www.drivebird.com/content-api"
+               target="_blank" rel="noopener noreferrer">
+                DriveBird
+            </a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

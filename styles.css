@@ -1,0 +1,238 @@
+/* QuoteNest | IT 110 Midterm Project - styles.css */
+
+:root {
+    --primary: #3b5b7a;
+    --dark: #2c4560;
+    --light: #e8eef4;
+    --accent: #e9a23b;
+    --bg: #faf6ef;
+    --text: #2e2e2e;
+    --gray: #6b6b6b;
+    --border: #e6dfd3;
+    --shadow: 0 4px 14px rgba(0, 0, 0, .1);
+    --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+a { color: var(--primary); }
+img { max-width: 100%; display: block; }
+main { flex: 1; }
+h1, h2, h3 { line-height: 1.25; color: var(--dark); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 14px 6%;
+    background: var(--dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.site-header h2, .logo { color: #fff; font-size: 1.5rem; text-decoration: none; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.site-header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+}
+.site-header nav a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Buttons */
+.button {
+    display: inline-block;
+    min-height: 46px;
+    padding: 12px 28px;
+    background: var(--accent);
+    color: var(--text);
+    font: 600 1rem inherit;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s;
+}
+.button:hover { background: #d58f27; border-color: #d58f27; transform: translateY(-2px); }
+.button:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.button.secondary { background: none; color: var(--primary); border-color: var(--primary); }
+.button.secondary:hover { background: var(--primary); color: #fff; }
+
+/* Shared text and sections */
+.eyebrow {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(40px, 8vw, 70px) 6%;
+    text-align: center;
+}
+.section h2 { font-size: clamp(1.6rem, 4vw, 2.1rem); }
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 12px auto 0;
+    background: var(--accent);
+    border-radius: 4px;
+}
+.section-description { color: var(--gray); margin: 15px 0 30px; }
+
+/* Hero and closing */
+.hero, .closing { text-align: center; color: #fff; }
+.hero h1, .closing h2 { color: #fff; }
+.hero {
+    padding: clamp(60px, 12vw, 110px) 6%;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(233, 162, 59, .25), transparent 40%),
+        linear-gradient(135deg, var(--dark), var(--primary));
+}
+.hero h1 { font-size: clamp(2rem, 7vw, 3.4rem); margin-bottom: 15px; }
+.hero p { max-width: 600px; margin: 0 auto 25px; font-size: 1.1rem; }
+.closing {
+    padding: clamp(45px, 8vw, 75px) 6%;
+    background: linear-gradient(135deg, var(--primary), var(--dark));
+}
+.closing h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 10px; }
+.closing p { margin-bottom: 25px; }
+
+/* About and team */
+.about { max-width: 850px; }
+.about p { color: var(--gray); }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 20px; }
+.team-card {
+    background: #fff;
+    padding: 30px 20px;
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: .2s;
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(0, 0, 0, .15); }
+.profile-placeholder {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--light);
+    outline: 3px solid var(--accent);
+    background: var(--light);
+}
+.team-card h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.team-card p:first-of-type {
+    display: inline-block;
+    padding: 3px 12px;
+    margin-bottom: 12px;
+    background: var(--light);
+    color: var(--dark);
+    font-size: .85rem;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.team-card p:last-of-type { color: var(--gray); font-size: .95rem; }
+.team-note { margin-top: 30px; font-style: italic; color: var(--gray); }
+
+/* Generator page */
+.generator-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(30px, 6vw, 60px) 6%;
+    background: radial-gradient(circle at 90% 10%, rgba(233, 162, 59, .15), transparent 35%);
+}
+.quote-container { width: 100%; max-width: 700px; text-align: center; }
+.quote-container h1 { font-size: clamp(1.7rem, 5vw, 2.3rem); margin-bottom: 8px; }
+.intro { color: var(--gray); margin-bottom: 30px; }
+.quote-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    margin-bottom: 20px;
+    padding: 55px clamp(20px, 5vw, 40px) 30px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.quote-mark {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    font: 4.5rem/1 Georgia, serif;
+    color: var(--accent);
+}
+#quote-text {
+    font: italic clamp(1.1rem, 3.5vw, 1.45rem) Georgia, serif;
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}
+#quote-author { font-weight: 600; color: var(--primary); }
+#status-message { min-height: 24px; margin-bottom: 15px; font-size: .95rem; color: var(--gray); }
+#status-message.error { color: #c0392b; font-weight: 600; }
+#status-message.success { color: #2e7d32; font-weight: 600; }
+.quote-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 25px; }
+.back-link { display: inline-block; padding: 8px 4px; font-weight: 600; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+/* Footer */
+footer { text-align: center; padding: 22px 6%; background: var(--dark); color: #fff; font-size: .9rem; }
+footer a { color: var(--accent); }
+
+/* Animation */
+.hero, .quote-container, .team-card { animation: fadeUp .6s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } }
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Responsive: tablet */
+@media (max-width: 900px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .team-card:last-child { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12.5px); }
+}
+
+/* Responsive: phone */
+@media (max-width: 600px) {
+    html { scroll-padding-top: 10px; }
+    .site-header { flex-direction: column; text-align: center; position: static; }
+    .team-grid { grid-template-columns: 1fr; max-width: 380px; margin: 20px auto 0; }
+    .team-card:last-child { grid-column: auto; width: 100%; }
+    .quote-actions .button { flex: 1 1 100%; }
+    .quote-mark { font-size: 3.5rem; left: 15px; }
+}
+
+/* Responsive: small phone */
+@media (max-width: 400px) {
+    .button { width: 100%; padding: 12px 20px; }
+    .hero .button, .closing .button { max-width: 280px; }
+}
